@@ -1,0 +1,40 @@
+python preprocess/data.py {dataset_name}
+nohup python -u src/train.py --dataset book --model_type ComiRec-SA > ./log/ComiRec-SA 2>&1 &
+nohup python -u src/train.py --model_type Mine > ./log/default_ 2>&1 &
+nvidia-smi
+fuser -v /dev/nvidia*
+
+多样性代码！！！！！！！！！！！key error!
+
+1. check SINE , add aux loss ✓
+2. run book+taobao -> SINE
+除了baseline（结构已定）， 暂时用book14
+3. check MINE , add aux loss(version 1)
+
+
+point 1 : SA Encoder + mean active
+point 2 : Candidate generate from all item embeddings
+point 3 : trans matrix + (aux loss)
+
+
+********************数据集 信息************************
+          user_num       item_num      interaction    稀疏程度
+elec14    192,403        63,001        1,689,188      1e-4
+book14    603,668        367,982       8,898,041      4e-5              
+
+
+ML20      138,493        18,345        19,984,024     8e-3
+ML        266,956        30,824        27,671,491     3e-3
+taobao    976,779        1,708,530     85,384,110     5e-5
+
+book      1,855,618      703,121       27,158,711     2e-5
+elec      728,497        159,748       6,737,688      6e-5
+cloth     1,219,376      376,438       11,282,838     2e-5
+sport     331,919        103,992       2,835,746      8e-5
+movie     297,387        59,944        3,408,726      2e-4
+
+********************环境配置****************************
+conda create -n env1 python=3.6
+conda activate env1
+conda install -c pytorch faiss-gpu cudatoolkit=10.1
+pip install --upgrade tensorflow-gpu==1.15

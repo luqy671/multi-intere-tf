@@ -1,0 +1,231 @@
+nohup: ignoring input
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/mist/ComiRec-master/src/model.py:108: The name tf.layers.Layer is deprecated. Please use tf.compat.v1.layers.Layer instead.
+
+['src/train.py', '--model_type', 'ComiRec-DR', '--dataset', 'elec14']
+WARNING:tensorflow:From src/train.py:347: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+DataSet: elec14 (20)
+WARNING:tensorflow:From src/train.py:225: The name tf.GPUOptions is deprecated. Please use tf.compat.v1.GPUOptions instead.
+
+WARNING:tensorflow:From src/train.py:231: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From src/train.py:231: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2022-06-16 17:49:58.904640: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2022-06-16 17:49:58.939633: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2022-06-16 17:49:58.944286: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56255bb56610 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-06-16 17:49:58.944369: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-06-16 17:49:58.949500: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2022-06-16 17:49:59.103445: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x56255b8ca6b0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-06-16 17:49:59.103528: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA TITAN RTX, Compute Capability 7.5
+2022-06-16 17:49:59.104991: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: NVIDIA TITAN RTX major: 7 minor: 5 memoryClockRate(GHz): 1.77
+pciBusID: 0000:1a:00.0
+2022-06-16 17:49:59.105432: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2022-06-16 17:49:59.107142: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2022-06-16 17:49:59.109721: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2022-06-16 17:49:59.110260: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2022-06-16 17:49:59.113367: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2022-06-16 17:49:59.115195: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2022-06-16 17:49:59.121478: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2022-06-16 17:49:59.122793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2022-06-16 17:49:59.122862: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2022-06-16 17:49:59.123904: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-06-16 17:49:59.123924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2022-06-16 17:49:59.123936: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2022-06-16 17:49:59.125149: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21747 MB memory) -> physical GPU (device: 0, name: NVIDIA TITAN RTX, pci bus id: 0000:1a:00.0, compute capability: 7.5)
+WARNING:tensorflow:From /home/mist/ComiRec-master/src/model.py:16: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /home/mist/ComiRec-master/src/model.py:27: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:Entity <bound method CapsuleNetwork.call of <model.CapsuleNetwork object at 0x7f202188a2b0>> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: module 'gast' has no attribute 'Index'
+WARNING:tensorflow:From /home/mist/ComiRec-master/src/model.py:120: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /home/mist/ComiRec-master/src/model.py:154: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /home/mist/ComiRec-master/src/model.py:39: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From src/train.py:237: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From src/train.py:238: The name tf.local_variables_initializer is deprecated. Please use tf.compat.v1.local_variables_initializer instead.
+
+training begin
+2022-06-16 17:50:05.908477: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+default_2
+iter: 1000, train loss: 8.0807, valid recall: 0.023970, valid ndcg: 0.023497, valid hitrate: 0.046830
+WARNING:tensorflow:From /home/mist/ComiRec-master/src/model.py:66: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+time interval: 0.2803 min
+default_2
+iter: 2000, train loss: 7.9540, valid recall: 0.033620, valid ndcg: 0.031806, valid hitrate: 0.064917
+time interval: 0.5461 min
+default_2
+iter: 3000, train loss: 7.7198, valid recall: 0.036693, valid ndcg: 0.034080, valid hitrate: 0.071050
+time interval: 0.8158 min
+default_2
+iter: 4000, train loss: 7.3164, valid recall: 0.039275, valid ndcg: 0.035830, valid hitrate: 0.075988
+time interval: 1.0791 min
+default_2
+iter: 5000, train loss: 6.9902, valid recall: 0.039079, valid ndcg: 0.035192, valid hitrate: 0.075208
+time interval: 1.3358 min
+default_2
+iter: 6000, train loss: 6.7985, valid recall: 0.038857, valid ndcg: 0.034828, valid hitrate: 0.075416
+time interval: 1.5994 min
+default_2
+iter: 7000, train loss: 6.6643, valid recall: 0.037639, valid ndcg: 0.033606, valid hitrate: 0.073129
+time interval: 1.8673 min
+default_2
+iter: 8000, train loss: 6.5524, valid recall: 0.037429, valid ndcg: 0.033251, valid hitrate: 0.072557
+time interval: 2.1361 min
+default_2
+iter: 9000, train loss: 6.4618, valid recall: 0.037617, valid ndcg: 0.033525, valid hitrate: 0.073337
+time interval: 2.4024 min
+default_2
+iter: 10000, train loss: 6.3849, valid recall: 0.036760, valid ndcg: 0.032587, valid hitrate: 0.071985
+time interval: 2.6697 min
+default_2
+iter: 11000, train loss: 6.3206, valid recall: 0.036485, valid ndcg: 0.032171, valid hitrate: 0.071050
+time interval: 2.9380 min
+default_2
+iter: 12000, train loss: 6.2783, valid recall: 0.034616, valid ndcg: 0.031517, valid hitrate: 0.068087
+time interval: 3.2068 min
+default_2
+iter: 13000, train loss: 6.2260, valid recall: 0.035357, valid ndcg: 0.031824, valid hitrate: 0.069075
+time interval: 3.4712 min
+default_2
+iter: 14000, train loss: 6.1823, valid recall: 0.035128, valid ndcg: 0.031419, valid hitrate: 0.068451
+time interval: 3.7395 min
+default_2
+iter: 15000, train loss: 6.1457, valid recall: 0.035344, valid ndcg: 0.031046, valid hitrate: 0.069127
+time interval: 4.0099 min
+default_2
+iter: 16000, train loss: 6.1143, valid recall: 0.034754, valid ndcg: 0.031405, valid hitrate: 0.068399
+time interval: 4.2774 min
+default_2
+iter: 17000, train loss: 6.0908, valid recall: 0.035125, valid ndcg: 0.031566, valid hitrate: 0.069595
+time interval: 4.5467 min
+default_2
+iter: 18000, train loss: 6.0578, valid recall: 0.034933, valid ndcg: 0.031377, valid hitrate: 0.068659
+time interval: 4.8163 min
+default_2
+iter: 19000, train loss: 6.0259, valid recall: 0.034119, valid ndcg: 0.029889, valid hitrate: 0.066944
+time interval: 5.0891 min
+default_2
+iter: 20000, train loss: 5.9809, valid recall: 0.033159, valid ndcg: 0.029252, valid hitrate: 0.066112
+time interval: 5.3641 min
+default_2
+iter: 21000, train loss: 5.9620, valid recall: 0.033316, valid ndcg: 0.029607, valid hitrate: 0.065904
+time interval: 5.6330 min
+default_2
+iter: 22000, train loss: 5.9196, valid recall: 0.033177, valid ndcg: 0.029590, valid hitrate: 0.066580
+time interval: 5.9063 min
+default_2
+iter: 23000, train loss: 5.8925, valid recall: 0.031966, valid ndcg: 0.028738, valid hitrate: 0.064189
+time interval: 6.1775 min
+default_2
+iter: 24000, train loss: 5.8555, valid recall: 0.032319, valid ndcg: 0.028705, valid hitrate: 0.064345
+time interval: 6.4603 min
+default_2
+iter: 25000, train loss: 5.8293, valid recall: 0.031888, valid ndcg: 0.027901, valid hitrate: 0.063358
+time interval: 6.7443 min
+default_2
+iter: 26000, train loss: 5.7952, valid recall: 0.031461, valid ndcg: 0.027848, valid hitrate: 0.062058
+time interval: 7.0210 min
+default_2
+iter: 27000, train loss: 5.7566, valid recall: 0.030844, valid ndcg: 0.027213, valid hitrate: 0.060395
+time interval: 7.2941 min
+default_2
+iter: 28000, train loss: 5.7256, valid recall: 0.031158, valid ndcg: 0.027586, valid hitrate: 0.061642
+time interval: 7.5676 min
+default_2
+iter: 29000, train loss: 5.7021, valid recall: 0.030451, valid ndcg: 0.026763, valid hitrate: 0.060395
+time interval: 7.8410 min
+default_2
+iter: 30000, train loss: 5.6686, valid recall: 0.029420, valid ndcg: 0.026515, valid hitrate: 0.057692
+time interval: 8.1178 min
+default_2
+iter: 31000, train loss: 5.6394, valid recall: 0.029843, valid ndcg: 0.026245, valid hitrate: 0.058732
+time interval: 8.3936 min
+default_2
+iter: 32000, train loss: 5.6033, valid recall: 0.029589, valid ndcg: 0.026261, valid hitrate: 0.058940
+time interval: 8.6638 min
+default_2
+iter: 33000, train loss: 5.5673, valid recall: 0.030375, valid ndcg: 0.026289, valid hitrate: 0.060083
+time interval: 8.9399 min
+default_2
+iter: 34000, train loss: 5.5420, valid recall: 0.029804, valid ndcg: 0.026182, valid hitrate: 0.058628
+time interval: 9.2118 min
+default_2
+iter: 35000, train loss: 5.5188, valid recall: 0.029902, valid ndcg: 0.026913, valid hitrate: 0.059927
+time interval: 9.4817 min
+default_2
+iter: 36000, train loss: 5.4864, valid recall: 0.029389, valid ndcg: 0.026366, valid hitrate: 0.058524
+time interval: 9.7561 min
+default_2
+iter: 37000, train loss: 5.4666, valid recall: 0.028918, valid ndcg: 0.025608, valid hitrate: 0.057952
+time interval: 10.0332 min
+default_2
+iter: 38000, train loss: 5.4366, valid recall: 0.028904, valid ndcg: 0.025610, valid hitrate: 0.057121
+time interval: 10.3048 min
+default_2
+iter: 39000, train loss: 5.4079, valid recall: 0.028119, valid ndcg: 0.025188, valid hitrate: 0.056549
+time interval: 10.5806 min
+default_2
+iter: 40000, train loss: 5.3716, valid recall: 0.028767, valid ndcg: 0.025689, valid hitrate: 0.057432
+time interval: 10.8539 min
+default_2
+iter: 41000, train loss: 5.3635, valid recall: 0.027349, valid ndcg: 0.024997, valid hitrate: 0.054730
+time interval: 11.1267 min
+default_2
+iter: 42000, train loss: 5.3254, valid recall: 0.027637, valid ndcg: 0.025103, valid hitrate: 0.055301
+time interval: 11.3986 min
+default_2
+iter: 43000, train loss: 5.2997, valid recall: 0.027969, valid ndcg: 0.025294, valid hitrate: 0.055873
+time interval: 11.6669 min
+default_2
+iter: 44000, train loss: 5.2854, valid recall: 0.027869, valid ndcg: 0.025038, valid hitrate: 0.055613
+time interval: 11.9323 min
+default_2
+iter: 45000, train loss: 5.2509, valid recall: 0.028429, valid ndcg: 0.025201, valid hitrate: 0.056289
+time interval: 12.1892 min
+default_2
+iter: 46000, train loss: 5.2339, valid recall: 0.028341, valid ndcg: 0.025239, valid hitrate: 0.056497
+time interval: 12.4478 min
+default_2
+iter: 47000, train loss: 5.1997, valid recall: 0.027677, valid ndcg: 0.024856, valid hitrate: 0.055146
+time interval: 12.7048 min
+default_2
+iter: 48000, train loss: 5.1755, valid recall: 0.028271, valid ndcg: 0.025333, valid hitrate: 0.056601
+time interval: 12.9629 min
+default_2
+iter: 49000, train loss: 5.1539, valid recall: 0.027594, valid ndcg: 0.024914, valid hitrate: 0.054834
+time interval: 13.2230 min
+default_2
+iter: 50000, train loss: 5.1307, valid recall: 0.027413, valid ndcg: 0.025007, valid hitrate: 0.055353
+time interval: 13.4841 min
+default_2
+iter: 51000, train loss: 5.1070, valid recall: 0.027603, valid ndcg: 0.024881, valid hitrate: 0.055613
+time interval: 13.7433 min
+default_2
+iter: 52000, train loss: 5.0821, valid recall: 0.027087, valid ndcg: 0.024143, valid hitrate: 0.054678
+time interval: 14.0038 min
+default_2
+iter: 53000, train loss: 5.0613, valid recall: 0.027730, valid ndcg: 0.024464, valid hitrate: 0.054834
+time interval: 14.2676 min
+default_2
+iter: 54000, train loss: 5.0425, valid recall: 0.027358, valid ndcg: 0.024180, valid hitrate: 0.055198
+time interval: 14.5264 min
+default_2
+iter: 55000, train loss: 5.0194, valid recall: 0.027149, valid ndcg: 0.024588, valid hitrate: 0.054366
+model restored from best_model/default_2/
+valid recall: 0.039275, valid ndcg: 0.035830, valid hitrate: 0.075988, valid diversity: 0.000000
+test recall: 0.040217, test ndcg: 0.035693, test hitrate: 0.077127, test diversity: 0.000000
