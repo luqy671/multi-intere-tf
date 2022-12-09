@@ -6,14 +6,14 @@ from tensorflow.nn.rnn_cell import GRUCell
 from model import *
 
 class Model_Mine(Model):
-    def __init__(self, n_mid, embedding_dim, hidden_size, batch_size, num_interest, cand_num, seq_len=256, f_mycand=True, f_encoder=True, sa_dim=64, f_trans=True, trans_k=7, trans_h=16, trans_p=1.0, f_auxloss = True, loss_k=1.0):
+    def __init__(self, n_mid, embedding_dim, hidden_size, batch_size, num_interest, cand_num, seq_len=256, f_mycand=True, f_encoder=True, sa_dim=64, f_trans=True):
         super(Model_Mine, self).__init__(n_mid, embedding_dim, hidden_size,
                                                    batch_size, seq_len, flag="Model_Mine")
         
         #----------------------------------my init begin---------------------------------------------
         print('*'*25 + 'This is my model' + '*'*25)
         
-        print('*'*25 + ' f_mycand: {} --- f_encoder: {} ---- f_trans: {} ---- f_auxloss: {} '.format(f_mycand, f_encoder, f_trans,f_auxloss))
+        print('*'*25 + ' f_mycand: {} --- f_encoder: {} ---- f_trans: {}'.format(f_mycand, f_encoder, f_trans))
         print('+'*25 + ' num_interest: {} --- cand_num: {} '.format(num_interest, cand_num))
         
         att_dim = embedding_dim
@@ -113,6 +113,7 @@ class Model_Mine(Model):
 
         readout = tf.gather(tf.reshape(self.user_eb, [-1, self.dim]), tf.argmax(atten, axis=1, output_type=tf.int32) + tf.range(tf.shape(item_list_emb)[0]) * num_heads) #(batch,embed_dim)  
         
+        '''
         aux_loss = 0.0
         if f_auxloss:
             print('*'*25+'aux loss work (loss_k:{})'.format(loss_k) +'*'*25)
@@ -122,9 +123,9 @@ class Model_Mine(Model):
             aux_loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(
                 labels=aim_cand_hit, logits=logits_out))
 
-        aux_loss *= loss_k
+        aux_loss *= loss_k'''
         
-        self.build_sampled_softmax_loss(self.item_eb, readout, aux_loss)
+        self.build_sampled_softmax_loss(self.item_eb, readout)
         
     def build_sampled_softmax_loss(self, item_emb, user_emb, aux_loss=0.0):
         self.loss = tf.reduce_mean(tf.nn.sampled_softmax_loss(self.mid_embeddings_var, self.mid_embeddings_bias, tf.reshape(self.mid_batch_ph, [-1, 1]), user_emb, self.neg_num * self.batch_size, self.n_mid)) + aux_loss

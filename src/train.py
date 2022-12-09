@@ -20,7 +20,7 @@ from model_SINE import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-p', type=str, default='train', help='train | test')
-parser.add_argument('--dataset', type=str, default='book14', help='book | taobao')
+parser.add_argument('--dataset', type=str, default='book', help='book | taobao')
 parser.add_argument('--random_seed', type=int, default=19)
 parser.add_argument('--embedding_dim', type=int, default=64)
 parser.add_argument('--hidden_size', type=int, default=64)
@@ -36,11 +36,7 @@ parser.add_argument('--f_mycand', action='store_false')
 parser.add_argument('--f_encoder', action='store_false')
 parser.add_argument('--sa_dim', type=int, default=64)
 parser.add_argument('--f_trans', action='store_false')
-parser.add_argument('--trans_k', type=int, default=12)
-parser.add_argument('--trans_h', type=int, default=32)
-parser.add_argument('--trans_p', type=float, default=1.0)
-parser.add_argument('--f_auxloss', action='store_true')
-parser.add_argument('--loss_k', type=float, default=1.0)
+
 
 best_metric = 0
 
@@ -174,7 +170,7 @@ def get_model(dataset, model_type, item_count, batch_size, maxlen):
     elif model_type == 'ComiRec-SA':
         model = Model_ComiRec_SA(item_count, args.embedding_dim, args.hidden_size, batch_size, 4, maxlen)
     elif model_type == 'Mine':
-        model = Model_Mine(item_count, args.embedding_dim, args.hidden_size, batch_size, args.num_interest, args.cand_num, maxlen, args.f_mycand, args.f_encoder, args.sa_dim, args.f_trans, args.trans_k, args.trans_h, args.trans_p, args.f_auxloss, args.loss_k)
+        model = Model_Mine(item_count, args.embedding_dim, args.hidden_size, batch_size, args.num_interest, args.cand_num, maxlen, args.f_mycand, args.f_encoder, args.sa_dim, args.f_trans)
     elif model_type == 'SINE':
         model = Model_SINE(item_count, args.embedding_dim, args.hidden_size, batch_size, 4, args.cand_num, maxlen)
     else:
@@ -344,7 +340,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     SEED = args.random_seed
 
-    tf.set_random_seed(SEED)
+    #tf.set_random_seed(SEED)
     np.random.seed(SEED)
     random.seed(SEED)
 
@@ -354,14 +350,14 @@ if __name__ == '__main__':
     
     print('DataSet: {} ({})'.format(args.dataset,args.topN))
 
-    if args.dataset == 'elec14':
-        path = './data/elec14_data/'
+    if args.dataset == 'elec':
+        path = './data/elec_data/'
         item_count = 63002
         batch_size = 128
         maxlen = 20
         test_iter = 1000
-    elif args.dataset == 'book14':
-        path = './data/book14_data/'
+    elif args.dataset == 'book':
+        path = './data/book_data/'
         item_count = 367983
         batch_size = 128
         maxlen = 20

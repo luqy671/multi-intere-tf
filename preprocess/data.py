@@ -65,10 +65,10 @@ def read_from_ML(source):
 
 
 if name == 'book':
-    read_from_amazon('../Books_5.json')
+    read_from_amazon('../reviews_Books_5.json')
 elif name == 'taobao':
     read_from_taobao('../UserBehavior.csv')
-elif name == 'elec14':
+elif name == 'elec':
     read_from_amazon('../reviews_Electronics_5.json')
 
 

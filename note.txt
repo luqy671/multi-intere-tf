@@ -4,13 +4,6 @@ nohup python -u src/train.py --model_type Mine > ./log/default_ 2>&1 &
 nvidia-smi
 fuser -v /dev/nvidia*
 
-多样性代码！！！！！！！！！！！key error!
-
-1. check SINE , add aux loss ✓
-2. run book+taobao -> SINE
-除了baseline（结构已定）， 暂时用book14
-3. check MINE , add aux loss(version 1)
-
 
 point 1 : SA Encoder + mean active
 point 2 : Candidate generate from all item embeddings
