@@ -1,0 +1,458 @@
+nohup: 忽略输入
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/mist/multi-intere-tf/src/model.py:108: The name tf.layers.Layer is deprecated. Please use tf.compat.v1.layers.Layer instead.
+
+['src/train.py', '--cand_num', '100']
+DataSet: book (50)
+WARNING:tensorflow:From src/train.py:221: The name tf.GPUOptions is deprecated. Please use tf.compat.v1.GPUOptions instead.
+
+WARNING:tensorflow:From src/train.py:227: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From src/train.py:227: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2022-12-24 09:16:31.547576: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2022-12-24 09:16:31.591243: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2022-12-24 09:16:31.597209: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x560d4b910de0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-12-24 09:16:31.597275: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-12-24 09:16:31.603048: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2022-12-24 09:16:31.742230: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x560d4b8a5ab0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-12-24 09:16:31.742333: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA TITAN RTX, Compute Capability 7.5
+2022-12-24 09:16:31.743467: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: NVIDIA TITAN RTX major: 7 minor: 5 memoryClockRate(GHz): 1.77
+pciBusID: 0000:3d:00.0
+2022-12-24 09:16:31.743798: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcudart.so.10.0'; dlerror: libcudart.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/lib/x86_64-linux-gnu/:/usr/local/cuda/targets/x86_64-linux/lib/:/usr/lib/x86_64-linux-gnu/:/usr/local/cuda/extras/CUPTI/lib64/:/usr/local/cuda/lib64:/usr/local/magma/lib
+2022-12-24 09:16:31.744003: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcublas.so.10.0'; dlerror: libcublas.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/lib/x86_64-linux-gnu/:/usr/local/cuda/targets/x86_64-linux/lib/:/usr/lib/x86_64-linux-gnu/:/usr/local/cuda/extras/CUPTI/lib64/:/usr/local/cuda/lib64:/usr/local/magma/lib
+2022-12-24 09:16:31.744198: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcufft.so.10.0'; dlerror: libcufft.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/lib/x86_64-linux-gnu/:/usr/local/cuda/targets/x86_64-linux/lib/:/usr/lib/x86_64-linux-gnu/:/usr/local/cuda/extras/CUPTI/lib64/:/usr/local/cuda/lib64:/usr/local/magma/lib
+2022-12-24 09:16:31.744390: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcurand.so.10.0'; dlerror: libcurand.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/lib/x86_64-linux-gnu/:/usr/local/cuda/targets/x86_64-linux/lib/:/usr/lib/x86_64-linux-gnu/:/usr/local/cuda/extras/CUPTI/lib64/:/usr/local/cuda/lib64:/usr/local/magma/lib
+2022-12-24 09:16:31.744583: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcusolver.so.10.0'; dlerror: libcusolver.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/lib/x86_64-linux-gnu/:/usr/local/cuda/targets/x86_64-linux/lib/:/usr/lib/x86_64-linux-gnu/:/usr/local/cuda/extras/CUPTI/lib64/:/usr/local/cuda/lib64:/usr/local/magma/lib
+2022-12-24 09:16:31.744793: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcusparse.so.10.0'; dlerror: libcusparse.so.10.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/lib/x86_64-linux-gnu/:/usr/local/cuda/targets/x86_64-linux/lib/:/usr/lib/x86_64-linux-gnu/:/usr/local/cuda/extras/CUPTI/lib64/:/usr/local/cuda/lib64:/usr/local/magma/lib
+2022-12-24 09:16:31.744982: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcudnn.so.7'; dlerror: libcudnn.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/lib/x86_64-linux-gnu/:/usr/local/cuda/targets/x86_64-linux/lib/:/usr/lib/x86_64-linux-gnu/:/usr/local/cuda/extras/CUPTI/lib64/:/usr/local/cuda/lib64:/usr/local/magma/lib
+2022-12-24 09:16:31.745010: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1641] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2022-12-24 09:16:31.745098: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-12-24 09:16:31.745123: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2022-12-24 09:16:31.745145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+WARNING:tensorflow:From /home/mist/multi-intere-tf/src/model.py:16: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /home/mist/multi-intere-tf/src/model.py:27: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+*************************This is my model*************************
+************************* f_mycand: True --- f_encoder: False ---- f_trans: False
++++++++++++++++++++++++++ num_interest: 4 --- cand_num: 100 
+*************************candidate genarate from eb*************************
+WARNING:tensorflow:From /home/mist/multi-intere-tf/src/mymodel.py:77: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /home/mist/multi-intere-tf/src/mymodel.py:77: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
+
+*************************activ cand work*************************
+WARNING:tensorflow:From /home/mist/multi-intere-tf/src/mymodel.py:104: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /home/mist/multi-intere-tf/src/mymodel.py:133: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From src/train.py:233: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From src/train.py:234: The name tf.local_variables_initializer is deprecated. Please use tf.compat.v1.local_variables_initializer instead.
+
+training begin
+default_13
+iter: 1000, train loss: 7.9612, valid recall: 0.022432, valid ndcg: 0.015426, valid hitrate: 0.048404
+WARNING:tensorflow:From /home/mist/multi-intere-tf/src/model.py:66: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+time interval: 3.4878 min
+default_13
+iter: 2000, train loss: 7.6737, valid recall: 0.026976, valid ndcg: 0.020639, valid hitrate: 0.058062
+time interval: 7.0864 min
+default_13
+iter: 3000, train loss: 7.2792, valid recall: 0.033431, valid ndcg: 0.025007, valid hitrate: 0.071198
+time interval: 11.1193 min
+default_13
+iter: 4000, train loss: 7.0974, valid recall: 0.036316, valid ndcg: 0.026882, valid hitrate: 0.076383
+time interval: 15.1603 min
+default_13
+iter: 5000, train loss: 6.9487, valid recall: 0.040225, valid ndcg: 0.029435, valid hitrate: 0.083556
+time interval: 19.2603 min
+default_13
+iter: 6000, train loss: 6.9020, valid recall: 0.041857, valid ndcg: 0.030677, valid hitrate: 0.085411
+time interval: 23.3832 min
+default_13
+iter: 7000, train loss: 6.8382, valid recall: 0.044476, valid ndcg: 0.033196, valid hitrate: 0.092319
+time interval: 27.4247 min
+default_13
+iter: 8000, train loss: 6.9134, valid recall: 0.032489, valid ndcg: 0.022978, valid hitrate: 0.065301
+time interval: 31.4689 min
+default_13
+iter: 9000, train loss: 7.0421, valid recall: 0.038380, valid ndcg: 0.029092, valid hitrate: 0.080624
+time interval: 35.5139 min
+default_13
+iter: 10000, train loss: 6.8103, valid recall: 0.044312, valid ndcg: 0.032462, valid hitrate: 0.090596
+time interval: 39.5690 min
+default_13
+iter: 11000, train loss: 6.6893, valid recall: 0.041320, valid ndcg: 0.030435, valid hitrate: 0.084881
+time interval: 43.6067 min
+default_13
+iter: 12000, train loss: 6.6265, valid recall: 0.049980, valid ndcg: 0.038196, valid hitrate: 0.105985
+time interval: 47.7122 min
+default_13
+iter: 13000, train loss: 6.3986, valid recall: 0.052328, valid ndcg: 0.039545, valid hitrate: 0.109066
+time interval: 51.7613 min
+default_13
+iter: 14000, train loss: 6.2832, valid recall: 0.054127, valid ndcg: 0.041422, valid hitrate: 0.113489
+time interval: 55.7812 min
+default_13
+iter: 15000, train loss: 6.5052, valid recall: 0.037177, valid ndcg: 0.029265, valid hitrate: 0.080889
+time interval: 59.7838 min
+default_13
+iter: 16000, train loss: 7.2318, valid recall: 0.041201, valid ndcg: 0.033619, valid hitrate: 0.091673
+time interval: 63.7838 min
+default_13
+iter: 17000, train loss: 6.9181, valid recall: 0.047066, valid ndcg: 0.036316, valid hitrate: 0.099972
+time interval: 67.7606 min
+default_13
+iter: 18000, train loss: 6.8329, valid recall: 0.050271, valid ndcg: 0.038357, valid hitrate: 0.106913
+time interval: 71.7554 min
+default_13
+iter: 19000, train loss: 6.6969, valid recall: 0.052653, valid ndcg: 0.040822, valid hitrate: 0.112114
+time interval: 75.7217 min
+default_13
+iter: 20000, train loss: 6.3744, valid recall: 0.053880, valid ndcg: 0.041569, valid hitrate: 0.113986
+time interval: 79.6950 min
+default_13
+iter: 21000, train loss: 6.4224, valid recall: 0.054665, valid ndcg: 0.042686, valid hitrate: 0.116620
+time interval: 83.7034 min
+default_13
+iter: 22000, train loss: 6.6336, valid recall: 0.056574, valid ndcg: 0.043985, valid hitrate: 0.120894
+time interval: 87.7177 min
+default_13
+iter: 23000, train loss: 6.5608, valid recall: 0.057449, valid ndcg: 0.044866, valid hitrate: 0.122782
+time interval: 91.7312 min
+default_13
+iter: 24000, train loss: 6.4132, valid recall: 0.056231, valid ndcg: 0.043240, valid hitrate: 0.120380
+time interval: 95.6720 min
+default_13
+iter: 25000, train loss: 6.1558, valid recall: 0.062741, valid ndcg: 0.047450, valid hitrate: 0.132341
+time interval: 99.6260 min
+default_13
+iter: 26000, train loss: 5.8480, valid recall: 0.068578, valid ndcg: 0.050775, valid hitrate: 0.140458
+time interval: 103.5822 min
+default_13
+iter: 27000, train loss: 5.7715, valid recall: 0.070292, valid ndcg: 0.051834, valid hitrate: 0.143207
+time interval: 107.5502 min
+default_13
+iter: 28000, train loss: 5.8222, valid recall: 0.071898, valid ndcg: 0.052691, valid hitrate: 0.145924
+time interval: 111.5197 min
+default_13
+iter: 29000, train loss: 5.8031, valid recall: 0.072342, valid ndcg: 0.051499, valid hitrate: 0.145394
+time interval: 115.4812 min
+default_13
+iter: 30000, train loss: 5.6736, valid recall: 0.072842, valid ndcg: 0.052760, valid hitrate: 0.146951
+time interval: 119.4288 min
+default_13
+iter: 31000, train loss: 5.6642, valid recall: 0.074374, valid ndcg: 0.053237, valid hitrate: 0.150198
+time interval: 123.3865 min
+default_13
+iter: 32000, train loss: 5.7903, valid recall: 0.069255, valid ndcg: 0.051316, valid hitrate: 0.144549
+time interval: 127.3245 min
+default_13
+iter: 33000, train loss: 5.9640, valid recall: 0.066127, valid ndcg: 0.051951, valid hitrate: 0.142429
+time interval: 131.3034 min
+default_13
+iter: 34000, train loss: 6.0935, valid recall: 0.067245, valid ndcg: 0.053447, valid hitrate: 0.145096
+time interval: 135.2837 min
+default_13
+iter: 35000, train loss: 5.9377, valid recall: 0.067099, valid ndcg: 0.052367, valid hitrate: 0.144168
+time interval: 139.2679 min
+default_13
+iter: 36000, train loss: 5.9509, valid recall: 0.068767, valid ndcg: 0.054620, valid hitrate: 0.148028
+time interval: 143.2423 min
+default_13
+iter: 37000, train loss: 5.7683, valid recall: 0.070220, valid ndcg: 0.054821, valid hitrate: 0.150546
+time interval: 147.1981 min
+default_13
+iter: 38000, train loss: 5.6287, valid recall: 0.071165, valid ndcg: 0.055329, valid hitrate: 0.153412
+time interval: 151.1566 min
+default_13
+iter: 39000, train loss: 5.5414, valid recall: 0.070972, valid ndcg: 0.054083, valid hitrate: 0.153047
+time interval: 155.1153 min
+default_13
+iter: 40000, train loss: 5.4736, valid recall: 0.069855, valid ndcg: 0.053364, valid hitrate: 0.150330
+time interval: 159.0570 min
+default_13
+iter: 41000, train loss: 5.4307, valid recall: 0.073210, valid ndcg: 0.052154, valid hitrate: 0.151175
+time interval: 162.9998 min
+default_13
+iter: 42000, train loss: 5.2101, valid recall: 0.078477, valid ndcg: 0.054007, valid hitrate: 0.157189
+time interval: 166.9566 min
+default_13
+iter: 43000, train loss: 4.9955, valid recall: 0.082681, valid ndcg: 0.055943, valid hitrate: 0.163748
+time interval: 170.9177 min
+default_13
+iter: 44000, train loss: 4.9622, valid recall: 0.080816, valid ndcg: 0.054860, valid hitrate: 0.162224
+time interval: 174.8689 min
+default_13
+iter: 45000, train loss: 5.0496, valid recall: 0.081596, valid ndcg: 0.057045, valid hitrate: 0.163401
+time interval: 178.8015 min
+default_13
+iter: 46000, train loss: 5.0611, valid recall: 0.083547, valid ndcg: 0.058192, valid hitrate: 0.167625
+time interval: 182.7522 min
+default_13
+iter: 47000, train loss: 4.9662, valid recall: 0.083280, valid ndcg: 0.057128, valid hitrate: 0.165339
+time interval: 186.6607 min
+default_13
+iter: 48000, train loss: 4.9238, valid recall: 0.079531, valid ndcg: 0.055210, valid hitrate: 0.160568
+time interval: 190.5881 min
+default_13
+iter: 49000, train loss: 4.8584, valid recall: 0.084107, valid ndcg: 0.057513, valid hitrate: 0.167807
+time interval: 194.5313 min
+default_13
+iter: 50000, train loss: 4.9299, valid recall: 0.082515, valid ndcg: 0.057936, valid hitrate: 0.166647
+time interval: 198.4538 min
+default_13
+iter: 51000, train loss: 4.8268, valid recall: 0.088766, valid ndcg: 0.060964, valid hitrate: 0.176835
+time interval: 202.3884 min
+default_13
+iter: 52000, train loss: 4.6779, valid recall: 0.087291, valid ndcg: 0.059336, valid hitrate: 0.173621
+time interval: 206.3064 min
+default_13
+iter: 53000, train loss: 4.6758, valid recall: 0.088714, valid ndcg: 0.060955, valid hitrate: 0.174566
+time interval: 210.2282 min
+default_13
+iter: 54000, train loss: 4.7288, valid recall: 0.088283, valid ndcg: 0.060740, valid hitrate: 0.177216
+time interval: 214.1429 min
+default_13
+iter: 55000, train loss: 4.6142, valid recall: 0.091366, valid ndcg: 0.061843, valid hitrate: 0.181771
+time interval: 218.0877 min
+default_13
+iter: 56000, train loss: 4.6196, valid recall: 0.088140, valid ndcg: 0.060479, valid hitrate: 0.174980
+time interval: 222.0075 min
+default_13
+iter: 57000, train loss: 4.6162, valid recall: 0.085154, valid ndcg: 0.057414, valid hitrate: 0.168072
+time interval: 225.9313 min
+default_13
+iter: 58000, train loss: 4.5927, valid recall: 0.086898, valid ndcg: 0.058215, valid hitrate: 0.171037
+time interval: 229.8646 min
+default_13
+iter: 59000, train loss: 4.5486, valid recall: 0.086362, valid ndcg: 0.057767, valid hitrate: 0.169944
+time interval: 233.7790 min
+default_13
+iter: 60000, train loss: 4.5139, valid recall: 0.088381, valid ndcg: 0.059558, valid hitrate: 0.174947
+time interval: 237.7074 min
+default_13
+iter: 61000, train loss: 4.7267, valid recall: 0.083803, valid ndcg: 0.058483, valid hitrate: 0.169414
+time interval: 241.6509 min
+default_13
+iter: 62000, train loss: 4.7773, valid recall: 0.076101, valid ndcg: 0.047697, valid hitrate: 0.143456
+time interval: 245.5802 min
+default_13
+iter: 63000, train loss: 4.5890, valid recall: 0.090071, valid ndcg: 0.059006, valid hitrate: 0.176587
+time interval: 249.5158 min
+default_13
+iter: 64000, train loss: 4.3415, valid recall: 0.090846, valid ndcg: 0.059905, valid hitrate: 0.180529
+time interval: 253.4413 min
+default_13
+iter: 65000, train loss: 4.3843, valid recall: 0.090274, valid ndcg: 0.060855, valid hitrate: 0.181059
+time interval: 257.3739 min
+default_13
+iter: 66000, train loss: 4.4908, valid recall: 0.093353, valid ndcg: 0.063341, valid hitrate: 0.186509
+time interval: 261.3311 min
+default_13
+iter: 67000, train loss: 4.3264, valid recall: 0.093359, valid ndcg: 0.063030, valid hitrate: 0.187006
+time interval: 265.2877 min
+default_13
+iter: 68000, train loss: 4.6093, valid recall: 0.076640, valid ndcg: 0.053997, valid hitrate: 0.159441
+time interval: 269.2199 min
+default_13
+iter: 69000, train loss: 4.3354, valid recall: 0.094027, valid ndcg: 0.063449, valid hitrate: 0.186990
+time interval: 273.1775 min
+default_13
+iter: 70000, train loss: 4.3074, valid recall: 0.091153, valid ndcg: 0.060440, valid hitrate: 0.181208
+time interval: 277.1007 min
+default_13
+iter: 71000, train loss: 4.2086, valid recall: 0.091387, valid ndcg: 0.060078, valid hitrate: 0.182103
+time interval: 281.0083 min
+default_13
+iter: 72000, train loss: 4.3846, valid recall: 0.082001, valid ndcg: 0.055097, valid hitrate: 0.161181
+time interval: 284.9247 min
+default_13
+iter: 73000, train loss: 4.2270, valid recall: 0.090249, valid ndcg: 0.062542, valid hitrate: 0.181092
+time interval: 288.8500 min
+default_13
+iter: 74000, train loss: 4.3704, valid recall: 0.091027, valid ndcg: 0.059453, valid hitrate: 0.179386
+time interval: 292.7732 min
+default_13
+iter: 75000, train loss: 4.2728, valid recall: 0.089214, valid ndcg: 0.056768, valid hitrate: 0.172578
+time interval: 296.7084 min
+default_13
+iter: 76000, train loss: 4.4065, valid recall: 0.096886, valid ndcg: 0.065470, valid hitrate: 0.193467
+time interval: 300.6534 min
+default_13
+iter: 77000, train loss: 4.0637, valid recall: 0.094753, valid ndcg: 0.063838, valid hitrate: 0.190568
+time interval: 304.5773 min
+default_13
+iter: 78000, train loss: 4.0051, valid recall: 0.095734, valid ndcg: 0.063762, valid hitrate: 0.190965
+time interval: 308.4984 min
+default_13
+iter: 79000, train loss: 4.5607, valid recall: 0.099165, valid ndcg: 0.066742, valid hitrate: 0.197972
+time interval: 312.4379 min
+default_13
+iter: 80000, train loss: 4.5508, valid recall: 0.090036, valid ndcg: 0.065288, valid hitrate: 0.185532
+time interval: 316.3936 min
+default_13
+iter: 81000, train loss: 4.2578, valid recall: 0.093890, valid ndcg: 0.064510, valid hitrate: 0.188596
+time interval: 320.3295 min
+default_13
+iter: 82000, train loss: 4.4276, valid recall: 0.090483, valid ndcg: 0.059758, valid hitrate: 0.180910
+time interval: 324.2557 min
+default_13
+iter: 83000, train loss: 4.0718, valid recall: 0.093808, valid ndcg: 0.062016, valid hitrate: 0.186774
+time interval: 328.1813 min
+default_13
+iter: 84000, train loss: 4.0836, valid recall: 0.087867, valid ndcg: 0.058876, valid hitrate: 0.178293
+time interval: 332.1201 min
+default_13
+iter: 85000, train loss: 4.2050, valid recall: 0.061343, valid ndcg: 0.039527, valid hitrate: 0.121175
+time interval: 336.0750 min
+default_13
+iter: 86000, train loss: 4.7991, valid recall: 0.079882, valid ndcg: 0.058892, valid hitrate: 0.170060
+time interval: 340.0400 min
+default_13
+iter: 87000, train loss: 4.8307, valid recall: 0.083594, valid ndcg: 0.062708, valid hitrate: 0.179187
+time interval: 344.0038 min
+default_13
+iter: 88000, train loss: 4.6639, valid recall: 0.084505, valid ndcg: 0.063516, valid hitrate: 0.181258
+time interval: 347.9762 min
+default_13
+iter: 89000, train loss: 4.7820, valid recall: 0.084873, valid ndcg: 0.062058, valid hitrate: 0.181043
+time interval: 351.9140 min
+default_13
+iter: 90000, train loss: 4.2603, valid recall: 0.081388, valid ndcg: 0.058406, valid hitrate: 0.173439
+time interval: 355.8712 min
+default_13
+iter: 91000, train loss: 4.2290, valid recall: 0.081888, valid ndcg: 0.058993, valid hitrate: 0.174532
+time interval: 359.8158 min
+default_13
+iter: 92000, train loss: 4.2160, valid recall: 0.081752, valid ndcg: 0.058921, valid hitrate: 0.174416
+time interval: 363.7577 min
+default_13
+iter: 93000, train loss: 4.1631, valid recall: 0.082108, valid ndcg: 0.058729, valid hitrate: 0.175526
+time interval: 367.6943 min
+default_13
+iter: 94000, train loss: 4.1433, valid recall: 0.082359, valid ndcg: 0.058850, valid hitrate: 0.175162
+time interval: 371.6246 min
+default_13
+iter: 95000, train loss: 4.1021, valid recall: 0.082191, valid ndcg: 0.058978, valid hitrate: 0.175377
+time interval: 375.5584 min
+default_13
+iter: 96000, train loss: 4.0754, valid recall: 0.083967, valid ndcg: 0.060487, valid hitrate: 0.178740
+time interval: 379.4969 min
+default_13
+iter: 97000, train loss: 3.9753, valid recall: 0.085705, valid ndcg: 0.059491, valid hitrate: 0.180993
+time interval: 383.4320 min
+default_13
+iter: 98000, train loss: 3.9744, valid recall: 0.085346, valid ndcg: 0.059150, valid hitrate: 0.180794
+time interval: 387.3657 min
+default_13
+iter: 99000, train loss: 3.9993, valid recall: 0.077625, valid ndcg: 0.055144, valid hitrate: 0.165372
+time interval: 391.3338 min
+default_13
+iter: 100000, train loss: 4.1691, valid recall: 0.081409, valid ndcg: 0.058370, valid hitrate: 0.170888
+time interval: 395.2768 min
+default_13
+iter: 101000, train loss: 4.2794, valid recall: 0.082281, valid ndcg: 0.059226, valid hitrate: 0.172810
+time interval: 399.2253 min
+default_13
+iter: 102000, train loss: 4.0691, valid recall: 0.081457, valid ndcg: 0.056377, valid hitrate: 0.170772
+time interval: 403.1625 min
+default_13
+iter: 103000, train loss: 4.0114, valid recall: 0.077858, valid ndcg: 0.052713, valid hitrate: 0.159094
+time interval: 407.1055 min
+default_13
+iter: 104000, train loss: 4.0851, valid recall: 0.065615, valid ndcg: 0.042138, valid hitrate: 0.128249
+time interval: 411.0631 min
+default_13
+iter: 105000, train loss: 4.8414, valid recall: 0.073424, valid ndcg: 0.050227, valid hitrate: 0.150115
+time interval: 415.0424 min
+default_13
+iter: 106000, train loss: 4.7305, valid recall: 0.074552, valid ndcg: 0.052140, valid hitrate: 0.154919
+time interval: 419.0071 min
+default_13
+iter: 107000, train loss: 4.6791, valid recall: 0.074195, valid ndcg: 0.052178, valid hitrate: 0.155250
+time interval: 422.9806 min
+default_13
+iter: 108000, train loss: 4.6193, valid recall: 0.074937, valid ndcg: 0.052760, valid hitrate: 0.156244
+time interval: 426.9344 min
+default_13
+iter: 109000, train loss: 4.6456, valid recall: 0.081071, valid ndcg: 0.059894, valid hitrate: 0.172627
+time interval: 430.8971 min
+default_13
+iter: 110000, train loss: 4.4932, valid recall: 0.081546, valid ndcg: 0.060300, valid hitrate: 0.174151
+time interval: 434.8150 min
+default_13
+iter: 111000, train loss: 4.4385, valid recall: 0.081089, valid ndcg: 0.060182, valid hitrate: 0.173837
+time interval: 438.7363 min
+default_13
+iter: 112000, train loss: 4.2614, valid recall: 0.081490, valid ndcg: 0.060096, valid hitrate: 0.174764
+time interval: 442.6073 min
+default_13
+iter: 113000, train loss: 4.3598, valid recall: 0.081035, valid ndcg: 0.060362, valid hitrate: 0.174880
+time interval: 446.4813 min
+default_13
+iter: 114000, train loss: 4.3401, valid recall: 0.080061, valid ndcg: 0.058347, valid hitrate: 0.171203
+time interval: 450.3034 min
+default_13
+iter: 115000, train loss: 4.2088, valid recall: 0.080127, valid ndcg: 0.058928, valid hitrate: 0.172959
+time interval: 454.2052 min
+default_13
+iter: 116000, train loss: 4.1546, valid recall: 0.081467, valid ndcg: 0.059576, valid hitrate: 0.174483
+time interval: 458.1207 min
+default_13
+iter: 117000, train loss: 4.2549, valid recall: 0.080979, valid ndcg: 0.058980, valid hitrate: 0.172644
+time interval: 462.0510 min
+default_13
+iter: 118000, train loss: 4.2343, valid recall: 0.082002, valid ndcg: 0.059659, valid hitrate: 0.175046
+time interval: 465.9797 min
+default_13
+iter: 119000, train loss: 4.2032, valid recall: 0.081604, valid ndcg: 0.059382, valid hitrate: 0.174582
+time interval: 469.9138 min
+default_13
+iter: 120000, train loss: 4.1431, valid recall: 0.081902, valid ndcg: 0.057289, valid hitrate: 0.171103
+time interval: 473.8318 min
+default_13
+iter: 121000, train loss: 3.9081, valid recall: 0.081709, valid ndcg: 0.058142, valid hitrate: 0.173191
+time interval: 477.7534 min
+default_13
+iter: 122000, train loss: 3.8466, valid recall: 0.082240, valid ndcg: 0.058268, valid hitrate: 0.174930
+time interval: 481.5533 min
+default_13
+iter: 123000, train loss: 3.8112, valid recall: 0.082133, valid ndcg: 0.058480, valid hitrate: 0.175328
+time interval: 485.4356 min
+default_13
+iter: 124000, train loss: 3.7874, valid recall: 0.082731, valid ndcg: 0.058280, valid hitrate: 0.175775
+time interval: 489.3769 min
+default_13
+iter: 125000, train loss: 3.7711, valid recall: 0.082926, valid ndcg: 0.058996, valid hitrate: 0.176603
+time interval: 493.2851 min
+default_13
+iter: 126000, train loss: 3.7303, valid recall: 0.083368, valid ndcg: 0.058671, valid hitrate: 0.177199
+time interval: 497.1615 min
+default_13
+iter: 127000, train loss: 3.7598, valid recall: 0.079522, valid ndcg: 0.057260, valid hitrate: 0.170176
+time interval: 501.0312 min
+default_13
+iter: 128000, train loss: 4.0487, valid recall: 0.081244, valid ndcg: 0.059423, valid hitrate: 0.174930
+time interval: 504.8599 min
+default_13
+iter: 129000, train loss: 3.9682, valid recall: 0.081499, valid ndcg: 0.059497, valid hitrate: 0.175791
+time interval: 508.7676 min
+default_13
+iter: 130000, train loss: 3.8818, valid recall: 0.081406, valid ndcg: 0.057110, valid hitrate: 0.173058
+model restored from best_model/default_13/
+valid recall: 0.099165, valid ndcg: 0.066742, valid hitrate: 0.197972, valid diversity: 0.000000
+test recall: 0.098193, test ndcg: 0.065802, test hitrate: 0.196018, test diversity: 0.000000

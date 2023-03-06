@@ -20,7 +20,7 @@ from model_SINE import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-p', type=str, default='train', help='train | test')
-parser.add_argument('--dataset', type=str, default='book', help='book | taobao')
+parser.add_argument('--dataset', type=str, default='elec', help='book | taobao')
 parser.add_argument('--random_seed', type=int, default=19)
 parser.add_argument('--embedding_dim', type=int, default=64)
 parser.add_argument('--hidden_size', type=int, default=64)
@@ -33,9 +33,9 @@ parser.add_argument('--patience', type=int, default=50)
 parser.add_argument('--topN', type=int, default=50)
 
 parser.add_argument('--f_mycand', action='store_false')
-parser.add_argument('--f_encoder', action='store_false')
+parser.add_argument('--f_encoder', action='store_true')
 parser.add_argument('--sa_dim', type=int, default=64)
-parser.add_argument('--f_trans', action='store_false')
+parser.add_argument('--f_trans', action='store_true')
 
 
 best_metric = 0
